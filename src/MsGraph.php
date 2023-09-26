@@ -179,7 +179,7 @@ class MsGraph
         $id    = $this->getUserId($id);
 
         if ($redirectWhenNotConnected) {
-            if (!$this->isConnected()) {
+            if (!$this->isConnected($id)) {
                 return redirect()->away(config('msgraph.redirectUri'));
             }
         }
