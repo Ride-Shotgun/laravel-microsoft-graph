@@ -323,7 +323,7 @@ class MsGraph
             $client = new Client;
 
             $mainHeaders = [
-                'Authorization' => 'Bearer '.$this->getAccessToken($id),
+                'Authorization' => 'Bearer '.$this->getAccessToken($id,false),
                 'content-type'  => 'application/json',
                 'Prefer'        => config('msgraph.preferTimezone'),
             ];
